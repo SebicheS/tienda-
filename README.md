@@ -20,21 +20,27 @@ MercaEZ es una tienda virtual orientada a la gestión y compra de productos en l
 
 
 
+\## Estado del proyecto
+
+
+
+\- Entregable 1: Prototipo en Figma ✅
+
+\- Entregable 2: En desarrollo (Login + Catálogo en Java)
+
+
+
 \## Funcionalidades
 
 
 
 \- Login de usuarios
 
-\- Panel administrador
-
 \- Catálogo de productos
 
-\- Carrito de compras
+\- Visualización en interfaz gráfica (JFrame)
 
-\- Historial de compras
-
-\- Lista de deseos
+\- Gestión básica de usuarios
 
 
 
@@ -47,8 +53,6 @@ MercaEZ es una tienda virtual orientada a la gestión y compra de productos en l
 \- Entorno de Desarrollo: NetBeans IDE
 
 \- Interfaz Gráfica: Java Swing (JFrame)
-
-\- Base de Datos: MySQL
 
 \- Diseño UI/UX: Figma
 
