@@ -183,20 +183,24 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       String user, pwd;
-        user=txtUsuario.getText();
-        pwd = txtPasword.getText();
-        LoginArchivo login = new LoginArchivo();
-        System.out.println(System.getProperty("user.dir"));
-       login.cargarUsuarios(System.getProperty("user.dir") + "/Usuarios.txt");{
-        if (login.validarUsuario(user, pwd)){
-       Catalogo acceso = new Catalogo();
-       acceso.setVisible(true);
-       this.setVisible(false);
-        } else{
-            JOptionPane.showMessageDialog(null, "usuario o contraseña incorrectos");
-        }
+      String user, pwd;
+user = txtUsuario.getText();
+pwd = txtPasword.getText();
+LoginArchivo login = new LoginArchivo();
+login.cargarUsuarios(System.getProperty("user.dir") + "/Usuarios.txt");
+
+if (login.validarUsuario(user, pwd)){
+    if (user.equals("admin")){
+        new Dashboard().setVisible(true);
+        new Catalogo().setVisible(true);
+        this.setVisible(false);
+    } else {
+        new Catalogo().setVisible(true);
+        this.setVisible(false);
     }
+} else {
+    JOptionPane.showMessageDialog(null, "usuario o contraseña incorrectos");
+}
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
