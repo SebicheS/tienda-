@@ -64,6 +64,8 @@ public class login extends javax.swing.JFrame {
         txtPasword.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txtPasword.setName(""); // NOI18N
 
+        txtUsuario.addActionListener(this::txtUsuarioActionPerformed);
+
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jLabel4.setText("¿A olvidado la contraseña?");
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -185,7 +187,8 @@ public class login extends javax.swing.JFrame {
         user=txtUsuario.getText();
         pwd = txtPasword.getText();
         LoginArchivo login = new LoginArchivo();
-        login.cargarUsuarios("Usuarios.txt");{
+        System.out.println(System.getProperty("user.dir"));
+       login.cargarUsuarios(System.getProperty("user.dir") + "/Usuarios.txt");{
         if (login.validarUsuario(user, pwd)){
        Catalogo acceso = new Catalogo();
        acceso.setVisible(true);
@@ -195,6 +198,10 @@ public class login extends javax.swing.JFrame {
         }
     }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
